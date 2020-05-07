@@ -4,7 +4,7 @@
  * now I'll explain a none 100 points solution then we will try to improve it 
  * suppose dp [i][j] -> you are at the i'th postion and you are playing the j'th note , when you are moving from postion i -> i+1 you try to change the current note to one of the notes with dis [ current note ] [ new note ] = 1 , or stay at the same note , this solution costs O ( LN^2 ) 
  * now we notice that we dont need to memorise what the current note is if you always make sure that Ord [i] = j 
- * that means instead of moving from the i'th postion to the i+1 you can just choose the next note and jump to the first occurrence after i such that Ord [ new i ] = j & dis [i][j] <= new i - i 
+ * that means instead of moving from the i'th postion to the i+1 you can just choose the next note and jump to the first occurrence after i such that Ord [ new i ] = j & dis [ Ord[i] ][j] <= new i - i 
 */ 
 #define fast ios_base::sync_with_stdio(0),cin.tie(0),cout.tie(0)
 #include <bits/stdc++.h>
